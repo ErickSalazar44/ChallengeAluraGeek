@@ -1,0 +1,133 @@
+.nav__contenedor {
+    display: flex;
+    width: 100%;
+    height: 4.5rem;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+    background: var(--white);
+}
+/* LOGO ALURAGEEK */
+.nav__logo--contenedor {
+    display: flex;
+    font-size: 0.75rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav__logo {
+    width: 2.2rem;
+    height: auto;
+}
+
+.nav-alura {
+    color: var(--azul);
+}
+
+.nav-geek {
+    color: var(--gris);
+}
+
+/* Ocultamos el buscador de pc */
+.nav__buscador-pc {
+    display: none;
+}
+
+/* navbar buscador y login */
+
+.nav__buscador {
+    width: auto;
+}
+
+.nav__content {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 2rem;
+}
+
+.nav__login {
+    text-decoration: none;
+    border: 1px solid var(--azul);
+    color: var(--azul);
+    display: flex;
+    width: 133px;
+    height: 40px;
+    padding: 12px 16px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+
+    .nav__contenedor {
+        padding: 1rem 2rem;
+        gap: 5rem;
+    }
+
+    .nav__buscador-movil {
+        display: none;
+    }
+
+    .nav__buscador-pc {
+        display: flex;
+        width: 272px;
+        padding: 8px 16px;
+        align-items: center;
+        gap: 8px;
+        border-radius: 20px;
+        background: var(--gris-claro);
+        position: relative;
+    }
+
+    .nav__buscador-pc--input {
+        border: none;
+        background: inherit;
+        font-size: 14px;
+        width: calc(100% - 30px);
+    }
+    .nav__buscador-pc--lupa {
+        position: absolute;
+        right: 1rem;
+        color: var(--gris);
+    }
+
+    .nav__lupa-pc {
+        width: 20px;
+        height: 20px;
+    }
+    .nav__content {
+        justify-content: space-between;
+        flex-grow: 1;
+        flex-direction: row;
+    }
+}
+
+
+@media (min-width: 1440px) {
+    .nav__contenedor {
+        padding: 1rem 0;
+        margin: 0 auto;
+        gap: 3rem;
+        height: 80px;
+    }
+
+    .nav__logo {
+        width: 3.12481rem;
+        height: 3.125rem;
+    }
+
+    .nav__buscador-pc {
+        width: 24.5625rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .nav__login {
+        width: 182px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+}  

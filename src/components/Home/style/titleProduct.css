@@ -1,0 +1,33 @@
+.titleProduct__contenedor {
+    display: flex;
+    justify-content: space-between;
+}
+
+.titleProduct {
+    color: var(--gris);
+}
+
+.titleProduct__contenedor--vt {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--azul);
+    gap: 0.5em;
+}
+
+@media (min-width:768px) {
+    .titleProduct {
+        font-size: 22px;
+    }
+
+    .titleProduct__contenedor--vt {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width:1440px) {
+    .titleProduct {
+        font-size: 2rem;
+    }
+}

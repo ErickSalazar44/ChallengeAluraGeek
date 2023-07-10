@@ -1,0 +1,81 @@
+.banner {
+    background: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.2) 0%,
+            rgba(0, 0, 0, 0.2) 100%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 41.15%, rgba(0, 0, 0, 0.8) 100%),
+        url('./banner.webp'), lightgray 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 192px;
+    color: white;
+    display: flex;
+    padding: 1rem;
+}
+
+.banner__contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.banner__titulo {
+    font-size: 1.375rem;
+    font-weight: 700;
+}
+
+.banner__ofertas {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.banner__verConsolas {
+    font-size: 0.875rem;
+    font-weight: 600;
+    background-color: var(--azul);
+    width: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .banner {
+        background: linear-gradient(0deg,
+                rgba(0, 0, 0, 0.3) 0%,
+                rgba(0, 0, 0, 0.3) 100%),
+            linear-gradient(180deg, rgba(0, 0, 0, 0) 41.15%, rgba(0, 0, 0, 0.9) 100%),
+            url('./banner.webp'), lightgray 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        height: 352px;
+        padding: 2rem;
+    }
+
+    .banner__contenido {
+        gap: 1rem;
+    }
+
+    .banner__titulo {
+        font-size: 3.25rem;
+        height: 69px;
+    }
+
+    .banner__ofertas {
+        font-size: 1.375rem;
+        font-weight: 700;
+    }
+}
+
+@media (min-width: 1440px) {
+    .banner {
+        height: 352px;
+        margin-bottom: 2rem;
+    }
+}

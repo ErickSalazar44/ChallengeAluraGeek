@@ -1,0 +1,22 @@
+.home__product--category {
+    padding: 1rem;
+}
+
+@media (min-width:768px) {
+    .home__product--category {
+        padding: 2rem;
+    }
+}
+
+
+@media (min-width:1150px) {
+    .home__product--category {
+        padding: 2rem 0;
+    }
+}
+
+@media (min-width:1440px) {
+    .home__product--category {
+        padding: 2rem 0;
+    }
+}

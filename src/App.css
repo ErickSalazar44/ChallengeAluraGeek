@@ -1,0 +1,16 @@
+/* PALETA DE COLORES */
+
+:root {
+    --azul: #2A7AE4;
+    --gris: #464646;
+    --gris-claro:#F5F5F5;
+    --white: #FFFFFF;
+    --azul-10: #EAF2FD
+}
+
+/* ANCHO DE LA PAGINA */
+
+.contenedor {
+    max-width: 1136px;
+    margin: 0 auto;
+}

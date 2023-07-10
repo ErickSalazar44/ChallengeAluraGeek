@@ -1,0 +1,35 @@
+.prod {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: var(--gris);
+    justify-content: center;
+    max-width: 176px;
+}
+
+.prod__img {
+    min-width: 156px;
+}
+
+.prod__body {
+    width: 100%;
+}
+
+.prod__title {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.prod__price {
+    font-size: 1rem;
+    font-weight: 700;
+
+}
+
+.prod__verProducto {
+    color: var(--azul);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
