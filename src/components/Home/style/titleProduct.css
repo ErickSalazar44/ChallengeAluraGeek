@@ -14,6 +14,7 @@
     font-weight: 700;
     color: var(--azul);
     gap: 0.5em;
+    cursor: pointer;
 }
 
 @media (min-width:768px) {

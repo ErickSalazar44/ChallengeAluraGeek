@@ -1,0 +1,13 @@
+.productoNoEncontrado {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--gris);
+}
+
+.productoNoEncontrado > img {
+    width: 220px;
+}

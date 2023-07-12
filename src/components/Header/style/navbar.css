@@ -98,6 +98,7 @@
     .nav__lupa-pc {
         width: 20px;
         height: 20px;
+        cursor: pointer;
     }
     .nav__content {
         justify-content: space-between;

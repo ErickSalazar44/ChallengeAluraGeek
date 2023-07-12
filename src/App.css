@@ -5,7 +5,7 @@
     --gris: #464646;
     --gris-claro:#F5F5F5;
     --white: #FFFFFF;
-    --azul-10: #EAF2FD
+    --azul-10: #EAF2FD;
 }
 
 /* ANCHO DE LA PAGINA */
@@ -13,4 +13,10 @@
 .contenedor {
     max-width: 1136px;
     margin: 0 auto;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }

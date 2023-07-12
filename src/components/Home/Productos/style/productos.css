@@ -5,6 +5,7 @@
     grid-gap: 1rem; /* Espacio entre los elementos */
     justify-content: center;
     margin: 1em 0;
+    justify-items: center;
 }
 
 .productos .prod:nth-child(5),

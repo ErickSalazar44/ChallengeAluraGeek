@@ -1,10 +1,18 @@
+import { useNavigate } from "react-router-dom";
 import "./style/titleProduct.css";
 
 const TituloProductos = ({ titulo }) => {
+
+    const navigate = useNavigate()
+    const handleNavigate = () => {
+        window.scrollTo(0,0)
+        navigate('/allproducts')
+    }
+    
     return (
         <div className="titleProduct__contenedor">
             <h3 className="titleProduct">{titulo}</h3>
-            <a className="titleProduct__contenedor--vt" href='#'>
+            <p onClick={handleNavigate} to={'/allproducts'} className="titleProduct__contenedor--vt">
                 <span className="titleProduct__ver-todo">Ver todo </span>
                 {/* icon =>*/}
                 <svg className="titleProduct__icon" xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'>
@@ -17,7 +25,7 @@ const TituloProductos = ({ titulo }) => {
                         </clipPath>
                     </defs>
                 </svg>
-            </a>
+            </p>
         </div>
     );
 };

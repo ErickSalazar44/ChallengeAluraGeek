@@ -2,31 +2,62 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import ProtectedRoutes from "./pages/ProtectedRoutes";
 import AllproductsPage from "./pages/AllproductsPage";
 import AgregarProductos from "./pages/AgregarProductos";
 import Navbar from "./components/Header/Navbar";
 import ProdPorId from "./pages/ProdPorId";
 import Footer from "./pages/Footer";
+import { useState } from "react";
+import { productos } from "/db.json";
 
 function App() {
-    return (
-        <div>
-            <Navbar />
-            <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/login' element={<Login />} />
-                <Route path='/product/:id' element={<ProdPorId />} />
+    /* almacena el value del input */
+    const [valueInput, setValueInput] = useState("");
 
-                <Route element={<ProtectedRoutes />}>
-                    <Route path='/Allproducts' element={<AllproductsPage />} />
-                    <Route
-                        path='/AgregarProductos'
-                        element={<AgregarProductos />}
-                    />
-                </Route>
+    /* estado para manejar los productos */
+    const [allproducts, setAllproducts] = useState(productos);
+
+    return (
+        <div className='main'>
+            <Navbar setValueInput={setValueInput} valueInput={valueInput} />
+            <Routes>
+                {/* Ruta principal */}
+                <Route path='/' element={<Home allproducts={allproducts} />} />
+
+                {/* Ruta Login */}
+                <Route path='/login' element={<Login />} />
+
+                {/* Ruta especificaciones del producto */}
+                <Route
+                    path='/product/:id'
+                    element={<ProdPorId allproducts={allproducts} />}
+                />
+
+                {/* Ruta todos los productos  */}
+                <Route
+                    path='/allproducts'
+                    element={
+                        <AllproductsPage
+                            valueInput={valueInput}
+                            allproducts={allproducts}
+                            setAllproducts={setAllproducts}
+                        />
+                    }
+                />
+                
+                {/* Ruta editar productos */}
+                <Route
+                    path='/edit/:id'
+                    element={<AgregarProductos />}
+                />
+                
+               {/* Ruta Agregar Productos */}
+                <Route
+                    path='/agregarProductos'
+                    element={<AgregarProductos />}
+                />
             </Routes>
-            <Footer/>
+            <Footer />
         </div>
     );
 }
