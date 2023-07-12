@@ -2,10 +2,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(156px, 1fr));
     grid-auto-rows: minmax(156px, 256px);
-    grid-gap: 1rem; /* Espacio entre los elementos */
+    grid-gap: 1rem;
     justify-content: center;
     margin: 1em 0;
-    justify-items: center;
 }
 
 .productos .prod:nth-child(5),

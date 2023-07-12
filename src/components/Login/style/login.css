@@ -45,6 +45,7 @@
     color: var(--white);
     font-size: 0.875rem;
     font-weight: 600;
+    cursor: pointer;
 }
 
 @media (min-width: 768px) {

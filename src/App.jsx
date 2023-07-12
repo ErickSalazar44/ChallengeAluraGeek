@@ -9,6 +9,7 @@ import ProdPorId from "./pages/ProdPorId";
 import Footer from "./pages/Footer";
 import { useState } from "react";
 import { productos } from "/db.json";
+import ActualizarProducto from "./pages/ActualizarProducto";
 
 function App() {
     /* almacena el value del input */
@@ -48,13 +49,18 @@ function App() {
                 {/* Ruta editar productos */}
                 <Route
                     path='/edit/:id'
-                    element={<AgregarProductos />}
+                    element={<ActualizarProducto
+                    allproducts={allproducts}
+                    setAllproducts={setAllproducts}
+                    />}
                 />
                 
                {/* Ruta Agregar Productos */}
                 <Route
                     path='/agregarProductos'
-                    element={<AgregarProductos />}
+                    element={<AgregarProductos
+                    allproducts={allproducts}
+                    setAllproducts={setAllproducts}/>}
                 />
             </Routes>
             <Footer />

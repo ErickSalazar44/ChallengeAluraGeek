@@ -9,6 +9,7 @@
 
 .prod__img {
     min-width: 156px;
+    object-fit: cover;
 }
 
 .prod__body {

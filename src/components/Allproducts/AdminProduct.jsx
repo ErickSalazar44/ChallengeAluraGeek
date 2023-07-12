@@ -14,6 +14,10 @@ const AdminProduct = ({ prod, onDelete }) => {
         navigate(`/edit/${id}`)
     }
 
+    const handleDescription = () => {
+        navigate(`/product/${prod.id}`)
+    }
+
     return (
         <article className='prod'>
             <div className="prod__img-contenedor">
@@ -43,7 +47,7 @@ const AdminProduct = ({ prod, onDelete }) => {
                 <p className='prod__price'>
                     <strong>R${prod.precio}</strong>
                 </p>
-                <p className='prod__verProducto'>Ver producto</p>
+                <p onClick={handleDescription} className='prod__verProducto'>Ver producto</p>
             </footer>
         </article>
     );

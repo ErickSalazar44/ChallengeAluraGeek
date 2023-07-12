@@ -13,7 +13,7 @@ const Home = ({allproducts}) => {
       <section className="home__section">
         {
           productosPorCategoria.map(categoria => (
-            <div className="home__product--category contenedor" key={categoria}>
+            <div id={categoria.split(" ").join("")} className="home__product--category contenedor" key={categoria}>
               <TituloProductos titulo={categoria}/>
               <Productos productos={allproducts.filter(prod => prod.categoria === categoria)}/>
             </div>

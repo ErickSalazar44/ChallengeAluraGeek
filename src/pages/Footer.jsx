@@ -50,7 +50,7 @@ const Footer = () => {
                 <a target="_blank" href="https://www.linkedin.com/in/erick-josep-salazar-8b8b6024b/">
                     <img src="./linkedin.svg" alt="logo linkedin" />
                 </a>
-                <a target="_blank" href="#">
+                <a target="_blank" href="https://github.com/ErickSalazar44/ChallengeAluraGeek">
                     <img src="./github.svg" alt="logo git" />
                 </a>
 
