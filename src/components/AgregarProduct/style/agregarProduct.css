@@ -93,6 +93,13 @@
 }
 
 
+/* VALIDACIONES */
+
+.validarUrl::before {
+    content: 'URL INCORRECTA';
+    color: rgb(245, 51, 51);
+}
+
 /* Btn */
 .agregarProducto__btn {
     background: var(--azul);

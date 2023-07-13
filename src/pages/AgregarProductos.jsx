@@ -1,6 +1,6 @@
 import { useRef, useState } from "react"
 import { useNavigate } from "react-router-dom";
-
+import { isImageUrl } from "../utils/validarUrl.js"
 
 const AgregarProductos = ({setAllproducts, allproducts}) => {
 
@@ -20,6 +20,15 @@ const AgregarProductos = ({setAllproducts, allproducts}) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    
+
+    if (!isImageUrl(urlRef.current.value)) {
+      urlRef.current.parentElement.classList.add('validarUrl')
+    } else {
+      urlRef.current.parentElement.classList.remove('validarUrl')
+    }
+
 
     if (
       urlRef.current.value.trim() === '' ||

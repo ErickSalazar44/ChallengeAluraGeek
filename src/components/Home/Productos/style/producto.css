@@ -10,6 +10,7 @@
 .prod__img {
     min-width: 156px;
     object-fit: cover;
+    aspect-ratio: 1.05;
 }
 
 .prod__body {
