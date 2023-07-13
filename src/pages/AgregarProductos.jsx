@@ -16,17 +16,37 @@ const AgregarProductos = ({setAllproducts, allproducts}) => {
   const priceRef = useRef()
   const descripcionRef = useRef()
 
+  const inputRefs = [urlRef, categoriaRef, nameProductRef, priceRef, descripcionRef];
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (
+      urlRef.current.value.trim() === '' ||
+      categoriaRef.current.value.trim() === '' ||
+      nameProductRef.current.value.trim() === '' ||
+      priceRef.current.value.trim() === '' 
+    ) {
+
+      inputRefs.forEach((ref) => {
+        if (ref.current.value.trim() === '') {
+          ref.current.parentElement.classList.add('nueva-clase');
+        } else {
+          ref.current.parentElement.classList.remove('nueva-clase');
+        }
+      });
+      return
+    }
+
+
+
     const newProduct = {
-      nombre: nameProductRef.current.value,
-      precio: priceRef.current.value,
-      imagen: urlRef.current.value,
+      nombre: nameProductRef.current.value.trim(),
+      precio: priceRef.current.value.trim(),
+      imagen: urlRef.current.value.trim(),
       id: counter + 1,
-      categoria: categoriaRef.current.value,
-      descripcion: descripcionRef.current.value,
+      categoria: categoriaRef.current.value.trim(),
+      descripcion: descripcionRef.current.value.trim(),
     };
   
     const newProducts = [...allproducts, newProduct];

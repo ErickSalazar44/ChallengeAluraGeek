@@ -16,13 +16,13 @@ const Login = () => {
           <h3 className="login__titulo">Iniciar Sesión</h3>
           <input
             className="login__input"
-            type="text" 
+            type="email"
             placeholder="Escribe su correo electronico"
             ref={emailRef}
           />
           <input
             className="login__input"
-            type="text" 
+            type="password" 
             placeholder="Escribe su contraseña"
             ref={passwordRef}
           />
