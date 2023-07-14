@@ -23,12 +23,24 @@ const Footer = () => {
                             </h2>
                         </div>
                         <ul className="footer__listas-contenedor">
-                            <li className="footer__li">Quienes somos</li>
-                            <li className="footer__li">Política de privacidad</li>
-                            <li className="footer__li">Programa de fidelidad</li>
-                            <li className="footer__li">Nuestras tiendas</li>
-                            <li className="footer__li">Quiero ser franquiciado</li>
-                            <li className="footer__li">Anúncie aquí</li>
+                            <li className="footer__li">
+                                <a href="#">Quienes somos</a>
+                            </li>
+                            <li className="footer__li">
+                                <a href="#">Política de privacidad</a>
+                            </li>
+                            <li className="footer__li">
+                                <a href="#">Programa de fidelidad</a>
+                            </li>
+                            <li className="footer__li">
+                                <a href="#">Nuestras tiendas</a>
+                            </li>
+                            <li className="footer__li">
+                                <a href="#">Quiero ser franquiciado</a>
+                            </li>
+                            <li className="footer__li">
+                                <a href="#">Anúncie aquí</a>
+                            </li>
                         </ul>
                     </div>
                     <form className="footer__form">
@@ -41,7 +53,7 @@ const Footer = () => {
                                 <textarea className="footer__form-w" type="text" placeholder="Escribe tu mensaje" />
                             </div>
                         </div>
-                        <button className="footer__form-btn">Enviar mensaje</button>
+                        <button className="footer__form-btn btn_animate">Enviar mensaje</button>
                     </form>
                 </div>
             </footer>

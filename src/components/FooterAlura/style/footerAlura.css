@@ -31,6 +31,7 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    color: var(--gris);
 }
 
 .footer__li {
@@ -38,6 +39,27 @@
     font-size: 1rem;
     font-weight: 500;
     line-height: normal;
+    cursor: pointer;
+    transition: color 0.5s;
+    position: relative;
+}
+
+.footer__li:hover {
+    color: var(--azul);
+}
+
+.footer__li::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    bottom: -1px;
+    height: 1px;
+    background-color: var(--azul);
+    transition: width 0.5s ;
+}
+
+.footer__li:hover::before {
+    width: 100%;
 }
 
 .footer__form {
@@ -109,6 +131,19 @@
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+    border-radius: 2px;
+    transform: box-shadow 0.5s, color 0.5s;
+}
+
+.footer__form-btn:hover {
+    color: var(--azul);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.footer__form-btn::before {
+    width: 150%;
+    height: 150%;
+    background-color: var(--white);
 }
 
 .rodapie {

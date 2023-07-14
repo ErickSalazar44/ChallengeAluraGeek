@@ -12,7 +12,9 @@ const Product = ({ prod }) => {
     
     return (
         <article className="prod">
-            <img className="prod__img" src={prod.imagen} alt={prod.name} />
+            <figure style={{overflow:'hidden'}}>
+                <img onClick={handleNavigate} className="prod__img" src={prod.imagen} alt={prod.name} />
+            </figure>
             <footer className="prod__body">
                 <h4 className="prod__title">{prod.nombre}</h4>
                 <p className="prod__price">

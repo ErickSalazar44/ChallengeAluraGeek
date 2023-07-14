@@ -34,7 +34,6 @@
 }
 
 /* navbar buscador y login */
-
 .nav__buscador {
     width: auto;
 }
@@ -43,7 +42,6 @@
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
-    gap: 2rem;
 }
 
 .nav__login {
@@ -59,7 +57,20 @@
     font-weight: 600;
     font-size: 14px;
     cursor: pointer;
+    border-radius: 1px;
 }
+
+.nav__login::before {
+    width: 150%;
+    height: 200%;
+    background-color: var(--azul);
+}
+
+.nav__login:hover {
+    color: var(--white);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
 
 @media (min-width: 768px) {
 

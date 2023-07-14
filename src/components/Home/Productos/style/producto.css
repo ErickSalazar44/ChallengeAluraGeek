@@ -11,6 +11,13 @@
     min-width: 156px;
     object-fit: cover;
     aspect-ratio: 1.05;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.prod__img:hover {
+    transform: scale(1.1);
 }
 
 .prod__body {

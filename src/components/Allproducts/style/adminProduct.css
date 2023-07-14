@@ -16,4 +16,14 @@
 .delete, 
 .edit {
     cursor: pointer;
+    fill: var(--white);
+    transition: 0.3s;
+}
+
+.delete:hover {
+    fill: rgb(238, 94, 94);
+}
+
+.edit:hover {
+    fill: rgb(38, 131, 253);
 }

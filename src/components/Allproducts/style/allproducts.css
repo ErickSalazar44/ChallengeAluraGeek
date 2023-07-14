@@ -41,6 +41,11 @@
     line-height: normal;
 }
 
+.allproducts .productos .prod:nth-child(6),
+.allproducts .productos .prod:nth-child(5) {
+    display: flex;
+}
+
 @media (min-width:768px) {
     .allproducts__header {
         padding: 0 2rem;

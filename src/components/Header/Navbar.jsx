@@ -62,7 +62,7 @@ const Navbar = ({ setValueInput, valueInput }) => {
                         />
                     </div>
                     {/* buscador movil */}
-                    <div className='nav__buscador-movil'>
+                    {/* <div className='nav__buscador-movil'>
                         <svg
                             width='18'
                             height='18'
@@ -75,11 +75,11 @@ const Navbar = ({ setValueInput, valueInput }) => {
                                 fill='#464646'
                             />
                         </svg>
-                    </div>
+                    </div> */}
                 </form>
                 {!isLoginPage && !isAllProductPage 
                 ? (
-                    <Link className='nav__login' to='/login'>
+                    <Link className='nav__login btn_animate' to='/login'>
                         Login
                     </Link>
                 ) :
