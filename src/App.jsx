@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes} from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -10,6 +10,7 @@ import Footer from "./pages/Footer";
 import { useState } from "react";
 import { productos } from "/db.json";
 import ActualizarProducto from "./pages/ActualizarProducto";
+import { useViewTransition } from "react-view-transitions";
 
 function App() {
     /* almacena el value del input */
@@ -17,6 +18,7 @@ function App() {
 
     /* estado para manejar los productos */
     const [allproducts, setAllproducts] = useState(productos);
+
 
     return (
         <div className='main'>

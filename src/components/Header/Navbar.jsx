@@ -1,6 +1,7 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./style/navbar.css";
 import { useRef } from "react";
+import { viewNavigate } from "../../utils/animationNavigate";
 
 const Navbar = ({ setValueInput, valueInput }) => {
     const navigate = useNavigate();
@@ -13,7 +14,7 @@ const Navbar = ({ setValueInput, valueInput }) => {
     const isAllProductPage = location.pathname === '/allproducts';
 
     const handleNavigateHome = () => {
-        navigate("/");
+        viewNavigate('/',navigate)
     };
 
     const handleSubmit = (e) => {
@@ -22,7 +23,7 @@ const Navbar = ({ setValueInput, valueInput }) => {
     };
 
     const handleInputValor = (e) => {
-        navigate("/allproducts");
+        viewNavigate("/allproducts",navigate);
         setValueInput(e.target.value)
     }
 
@@ -34,7 +35,7 @@ const Navbar = ({ setValueInput, valueInput }) => {
     return (
         <nav className='nav__contenedor contenedor'>
             <div onClick={handleNavigateHome} className='nav__logo--contenedor'>
-                <img className='nav__logo' src='./logo.svg' alt='logo' />
+                <img className='nav__logo' src='/logo.svg' alt='logo' />
                 <h2 className='nav__logo--titulo'>
                     <span className='nav-alura'>Alura</span>
                     <span className='nav-geek'>Geek</span>
@@ -48,7 +49,7 @@ const Navbar = ({ setValueInput, valueInput }) => {
                             <img
                                 onClick={resetValue}
                                 className='nav__lupa-pc'
-                                src='./lupa.svg'
+                                src='/lupa.svg'
                                 alt='lupa'
                             />
                         </span>
@@ -79,9 +80,9 @@ const Navbar = ({ setValueInput, valueInput }) => {
                 </form>
                 {!isLoginPage && !isAllProductPage 
                 ? (
-                    <Link className='nav__login btn_animate' to='/login'>
+                    <a className='nav__login btn_animate' onClick={() => viewNavigate('/login',navigate)}>
                         Login
-                    </Link>
+                    </a>
                 ) :
                 <></>
                 }

@@ -1,7 +1,8 @@
 import "../components/Allproducts/style/allproducts.css";
 import Product_no_encontrado from "../components/Allproducts/Product_no_encontrado";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AdminProduct from "../components/Allproducts/AdminProduct";
+import { viewNavigate } from "../utils/animationNavigate";
 
 const AllproductsPage = ({ valueInput, allproducts, setAllproducts }) => {
 
@@ -15,7 +16,7 @@ const AllproductsPage = ({ valueInput, allproducts, setAllproducts }) => {
         prod.nombre.includes(valueInput)
     );
 
-
+    const navigate = useNavigate()
 
     return (
         <section className='contenedor allproducts'>
@@ -24,7 +25,7 @@ const AllproductsPage = ({ valueInput, allproducts, setAllproducts }) => {
                     Todos los productos
                 </h2>
 
-                <Link className="add__producto" to='/agregarProductos'>Agregar producto</Link>
+                <a className="add__producto" onClick={()=> viewNavigate('/agregarProductos',navigate)}>Agregar producto</a>
             </header>
             <div className='productos home__product--category'>
                 {filtrado.length === 0 ? (

@@ -1,12 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import "./style/titleProduct.css";
+import { viewNavigate } from "../../utils/animationNavigate";
 
 const TituloProductos = ({ titulo }) => {
 
     const navigate = useNavigate()
     const handleNavigate = () => {
         window.scrollTo(0,0)
-        navigate('/allproducts')
+        viewNavigate('/allproducts',navigate)
     }
     
     return (
