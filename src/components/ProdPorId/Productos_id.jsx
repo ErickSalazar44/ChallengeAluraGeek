@@ -6,8 +6,8 @@ const Productos_id = ({producto}) => {
             <img 
               className="prod__id-img" 
               src={producto.imagen} 
-              alt={producto.nombre} 
-              style={{viewTransitionName: `imagen-${producto.id}`}} 
+              alt={producto.nombre}
+              style={{viewTransitionName:`imagen${producto.id}`}} 
             />
         <div className="prod__id-body">
             <h3 className="prod__id-body--titulo">{producto.nombre}</h3>

@@ -7,6 +7,7 @@ const Product = ({ prod }) => {
     const navigate = useNavigate()
 
     const handleNavigate = () => {
+        // recordar que es las tranciones se deben hacer de forma sincrona 
         viewNavigate(`/product/${prod.id}`,navigate)
     }
 
@@ -17,7 +18,8 @@ const Product = ({ prod }) => {
                     onClick={handleNavigate} 
                     className="prod__img" 
                     src={prod.imagen} 
-                    alt={prod.name}                
+                    alt={prod.name}
+                    style={{viewTransitionName:`imagen${prod.id}`}}                
                 />
             </div>
             <footer className="prod__body">

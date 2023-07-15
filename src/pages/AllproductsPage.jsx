@@ -1,6 +1,6 @@
 import "../components/Allproducts/style/allproducts.css";
 import Product_no_encontrado from "../components/Allproducts/Product_no_encontrado";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import AdminProduct from "../components/Allproducts/AdminProduct";
 import { viewNavigate } from "../utils/animationNavigate";
 
